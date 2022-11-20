@@ -1,21 +1,15 @@
 <template>
   <div class="about">
     <h1>About</h1>
-    <button @click="storeCounter.increaseCount" class="counter-button">{{ storeCounter.count }}</button>
+    <button @click="storeCounter.increaseCount" class="counter-button">
+      {{ storeCounter.count }}
+    </button>
   </div>
 </template>
 
-<script>
+<script setup>
 import { useCounterStore } from "../stores/counter";
-export default {
-  setup() {
-    const storeCounter = useCounterStore();
-
-    return {
-      storeCounter,
-    };
-  },
-};
+const storeCounter = useCounterStore();
 </script>
 <style>
 .counter-button {

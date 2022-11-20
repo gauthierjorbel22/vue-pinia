@@ -11,22 +11,17 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { useCounterStore } from "@/stores/counter";
 import Counter from "../components/Counter.vue";
 import Buttons from "../components/Buttons.vue";
-export default {
-  components: {
-    Counter,
-    Buttons,
-  },
-  setup() {
+
+  
+ 
     const storeCounter = useCounterStore();
-    return {
-      storeCounter,
-    };
-  },
-};
+
+ 
+
 </script>
 
 <style>

@@ -5,16 +5,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useCounterStore } from "@/stores/counter";
-export default {
-  setup() {
-    const storeCounter = useCounterStore();
-    return {
-      storeCounter,
-    };
-  },
-};
+const storeCounter = useCounterStore();
 </script>
 
 <style>
